@@ -1,0 +1,218 @@
+/* reset  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* custom properties */
+
+:root {
+  --Primary-soft-red: 10 79% 65%;
+  --Primary-cyan: 186 34% 60%;
+
+  --Nuetral-dark-brown: 25 47% 15%;
+  --Nuetral-medium-brown: 28 10% 53%;
+  --Nuetral-cream: 27 66% 92%;
+  --Nuetral-very-pale-orange: 33 100% 98%;
+}
+
+html {
+  font-size: 18px;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: hsl(var(--Nuetral-very-pale-orange));
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+  align-items: center; */
+  /* flex-grow: 1; */
+}
+.container {
+  display: grid;
+  gap: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: hsl(var(--Primary-soft-red));
+  border-radius: 0.5rem;
+}
+
+.balance-container > p:first-child {
+  color: hsl(var(--Nuetral-cream));
+  font-size: 0.9rem;
+  /* font-weight00; */
+}
+
+.balance-amount {
+  color: hsl(var(--Nuetral-cream));
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+main {
+  /* border: 1px solid blue; */
+  border-radius: 12px;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 4px 20px -5px rgba(0, 0, 0, 0.65); /* border: 1px solid red; */
+}
+
+.week-info {
+  padding: 1rem 0 0 1rem;
+}
+
+.week-info > h3 {
+  color: hsl(var(--Nuetral-dark-brown));
+}
+
+.bar-container {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.bar-pole {
+  height: 200px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bar {
+  position: relative;
+  border-radius: 0.3rem;
+  height: 100%;
+  width: 100%;
+  background-color: hsl(var(--Primary-soft-red));
+  /* B4DFE5 */
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.bar:hover {
+  background-color: hsl(var(--Primary-soft-red) / 0.88);
+}
+
+.days {
+  color: hsl(var(--Nuetral-medium-brown));
+  font-size: 0.9rem;
+  /* font-weight: 600; */
+}
+.bar-hover {
+  transition: 1s;
+  display: none;
+  color: white;
+  background-color: #392414;
+  position: absolute;
+  top: -40px;
+  left: -5px;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+}
+
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  /* background-color: brown; */
+}
+
+.total-spending > p:first-child,
+.percentage-amount > p:last-child {
+  font-size: 0.7rem;
+  color: hsl(var(--Nuetral-medium-brown));
+}
+
+.total-spend-amount {
+  color: hsl(var(--Nuetral-dark-brown));
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.percentage-amount {
+  text-align: end;
+  align-self: flex-end;
+}
+
+.percentage-amount > p:first-child {
+  font-weight: 600;
+  color: hsl(var(--Nuetral-dark-brown));
+  /* align-items: flex-end; */
+  margin-inline: auto;
+}
+
+@media (min-width: 400px) {
+  .container {
+    margin-inline: auto;
+    /* background-color: red; */
+    width: 35%;
+  }
+}

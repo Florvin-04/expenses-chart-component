@@ -1,43 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Expenses chart component</title>
+    <script src="index.js" defer></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="balance-container">
+          <p>My balance</p>
+          <p class="balance-amount">$921.48</p>
+        </div>
+        <img src="./images/logo.svg" alt="" class="logo" />
+      </header>
+      <main>
+        <div class="week-info">
+          <h3>Spending - Last 7 days</h3>
+        </div>
+        <div class="bar-container">
+          <div class="bar-pole">
+            <div class="bar monday" data-name="mon"><span data-name="mon" class="bar-hover">hover</span></div>
+            <div class="days monday">mon</div>
+          </div>
+          <div class="bar-pole">
+            <div class="bar teusday" data-name="tue"><span data-name="tue" class="bar-hover">hover</span></div>
+            <div class="days teusday">teu</div>
+          </div>
+          <div class="bar-pole">
+            <div class="bar wednesday" data-name="wed"><span data-name="wed" class="bar-hover">hover</span></div>
+            <div class="days wednesday">wed</div>
+          </div>
+          <div class="bar-pole">
+            <div class="bar thursday" data-name="thu"><span data-name="thu" class="bar-hover">hover</span></div>
+            <div class="days thursday">thu</div>
+          </div>
+          <div class="bar-pole">
+            <div class="bar friday" data-name="fri"><span data-name="fri" class="bar-hover">hover</span></div>
+            <div class="days friday">fri</div>
+          </div>
+          <div class="bar-pole">
+            <div class="bar saturday" data-name="sat"><span data-name="sat" class="bar-hover">hover</span></div>
+            <div class="days saturday">sat</div>
+          </div>
+          <div class="bar-pole">
+            <div class="bar sunday" data-name="sun"><span data-name="sun" class="bar-hover">hover</span></div>
+            <div class="days sunday">sun</div>
+          </div>
+        </div>
+        <div class="total-container">
+          <div class="total-spending">
+            <p>Total this month</p>
+            <p class="total-spend-amount">$478.33</p>
+          </div>
+          <div class="percentage-amount">
+            <p>+2.4%</p>
+            <p>from last month</p>
+          </div>
+        </div>
+      </main>
+    </div>
 
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/Florvin-04">Florvin</a>.</div>
+  </body>
 </html>
